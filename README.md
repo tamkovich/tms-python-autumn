@@ -87,3 +87,9 @@ git checkout upstream/master
 git checkout -b master
 ```
 7. Пункты от 4-ого до конца из раздела **Как добавить домашку?**
+
+## Что делать если не могу запушить?
+1. нужно изменить ссылку локальную
+```
+git remote set-url origin https://github.com/<your_username>/tms-python-autumn.git
+```
