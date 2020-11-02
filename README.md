@@ -93,3 +93,8 @@ git checkout -b master
 ```
 git remote set-url origin https://github.com/<your_username>/tms-python-autumn.git
 ```
+2. Проставить свои данные
+```
+git config --global user.name <YOUR_NICKNAME>
+git config --global user.email <YOUR_EMAIL>
+```
