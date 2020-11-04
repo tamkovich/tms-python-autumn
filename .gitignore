@@ -138,3 +138,4 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+src/Rekets-02/lesson_2.py
