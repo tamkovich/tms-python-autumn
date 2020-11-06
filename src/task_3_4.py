@@ -6,11 +6,4 @@ if a % 2 == 0:
 elif stroka[0] == stroka[middle]:
     print(stroka[1:a-1])
 else:
-    print(stroka[(middle)])
-
-
-
-
-
-
-
+    print(stroka[middle])
