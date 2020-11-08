@@ -5,3 +5,4 @@ elif 20 < N < 50:
     print('Кафе')
 else:
     print('Дом')
+    
