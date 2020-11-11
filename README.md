@@ -98,3 +98,10 @@ git remote set-url origin https://github.com/<your_username>/tms-python-autumn.g
 git config --global user.name <YOUR_NICKNAME>
 git config --global user.email <YOUR_EMAIL>
 ```
+
+## Как исправить ошибку squash commits
+1. Если хотите склеить **2** коммита
+```
+git rebase -i HEAD~2
+```
+Как неверно:
