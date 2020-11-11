@@ -104,4 +104,3 @@ git config --global user.email <YOUR_EMAIL>
 ```
 git rebase -i HEAD~2
 ```
-Как неверно:
