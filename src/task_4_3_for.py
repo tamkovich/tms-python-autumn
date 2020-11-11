@@ -1,7 +1,7 @@
-#Дан словарь:
+# Дан словарь:
 # {'test': 'test_value', 'europe': 'eur', 'dollar': 'usd', 'ruble': 'rub'}
-#Добавить каждому ключу число равное длине этого ключа (пример {‘key’: ‘value’} -> {‘key3’:
-#‘value’}). Чтобы получить список ключей - использовать метод .keys()
+# Добавить каждому ключу число равное длине этого ключа (пример {‘key’: ‘value’} -> {‘key3’:
+# ‘value’}). Чтобы получить список ключей - использовать метод .keys()
 
 d = {'test': 'test_value', 'europe': 'eur', 'dollar': 'usd', 'ruble': 'rub'}
 
@@ -16,4 +16,3 @@ for i in list_keys:
     d[list_new_keys[number_key]] = d.pop(list_keys[number_key])
     number_key += 1
 print(d)
-
