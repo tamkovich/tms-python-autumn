@@ -1,8 +1,8 @@
-#Создать строку равную третьему символу введенной строки.
+# Создать строку равную третьему символу введенной строки.
 
-stroka = str(input())
+stroka = input()
 _len = len(stroka)
 if _len >= 3:
     print(stroka[2])
 if _len < 3:
-        print('error')
+    print('error')
