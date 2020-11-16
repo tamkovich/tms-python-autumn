@@ -57,10 +57,10 @@ def gl_litr(x):
 def litr_gl(x):
     print("Литры в галлоны")
     return x / 3.785
-def litr_pint(x: float):
+def litr_pint(x):
     print("Пинты в литры")
     return x * 2
-def pint_litr(x: float):
+def pint_litr(x):
     print("Литры в пинты")
     return x / 2
 
