@@ -1,6 +1,8 @@
 while True:
-    X = int(input('Введите первое значение: '))
-    Y = int(input('Введите второе значение: '))
+    X = input('Введите первое значение: ')
+    Y = input('Введите второе значение: ')
+    X.isdigit()
+    Y.isdigit()
     sign = input('Введите знак: ')
     if sign == '+':
         print(X + Y)
