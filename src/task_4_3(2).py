@@ -4,7 +4,6 @@ f = a.values()
 s = []
 for i in range(4):
     x = b.pop(0)
-    x += str(len(x))
-    s.append(x)
+    s.append(f"{x}{len(x)}"
 g = dict(zip(s, f))
 print(g)
