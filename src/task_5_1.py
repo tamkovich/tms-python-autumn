@@ -8,22 +8,25 @@
 sign = 1
 sign_list = ['+', '-', '/', '*']
 while sign != 0:
-    x = int(input('Введите х: '))
-    y = int(input('Введите y: '))
+    x = input('Введите х: ')
+    y = input('Введите y: ')
     sign = input('Введите знак операции: ')
+    if x.isdigit() == False or y.isdigit() == False:
+        print("Введите числовое значение!")
+        continue
     if sign == '+':
-        z = x + y
+        z = int(x) + int(y)
         print('z =', z)
     if sign == '-':
-        z = x - y
+        z = int(x) - int(y)
         print('z =', z)
-    if sign == '/' and y != 0:
-        z = x / y
+    if sign == '/' and int(y) != 0:
+        z = int(x) / int(y)
         print('z =', z)
     if sign == '*':
-        z = x * y
+        z = int(x) * int(y)
         print('z =', z)
-    if y == 0:
+    if int(y) == 0:
         print('На ноль делить нельзя...')
     if sign == '0':
         break
