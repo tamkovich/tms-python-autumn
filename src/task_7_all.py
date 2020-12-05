@@ -152,8 +152,12 @@ dict_of_function = [
     {'num': 12, "start": "Enter liters ", "end": " US pints", "fun": liters_to_us_pints},
 ]
 print("________________________")
-for i in dict_of_function:
-    number_fun = int(input("\nNumber of function: "))
+while True:
+    number_fun = input("\nNumber of function: ")
+    if number_fun.isdigit() != True:
+        print("Enter int number!")
+        continue
+    number_fun = int(number_fun)
     if number_fun > 12 or number_fun < 0:
         print("ERROR OF NUMBER FUNCTIONS")
     if number_fun == 0:
