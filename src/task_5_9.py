@@ -1,6 +1,6 @@
 m = input()
 n = input()
-if m.isdigit() == True and n.isdigit() == True:
+if m.isdigit() and n.isdigit():
     m = int(m)
     n = int(n)
     x = list(range(m, n+1))
