@@ -86,7 +86,7 @@ while True:
           '12.Литры в пинты\n'
           'Введите число от 1 до 12:')
     x = input()
-    if x.isdigit() == True:
+    if x.isdigit():
         x = int(x)
     else:
         print('Введен не правильный тип данных')
@@ -94,7 +94,12 @@ while True:
     if x == 0:
         break
     print('Введите величину:  ')
-    value = float(input())
+    value = input()
+    try:
+        float(value)
+        return True
+    except ValueError:
+        return False
    
     if x in dict_functions.keys():
         print(dict_functions[x])
