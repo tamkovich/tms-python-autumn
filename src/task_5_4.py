@@ -1,5 +1,5 @@
 N = input('Введите число:', )
-if N.isdigit() == True
+if N.isdigit():
     N = int(N)
     S = 0
     for i in range(1, N + 1):
