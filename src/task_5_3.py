@@ -14,5 +14,5 @@ for element in range(1, len(list_element)):
     for number in range(1, len(list_summa)):
         if list_element[element] == list_summa[number] and\
                 list_element[number] == list_summa[element]:
-            print('Дружественное число:', list_element[element])
-            
+            print('Дружественное число:', list_element[element]
+       
