@@ -1,7 +1,7 @@
 while True:
     X = input('Введите первое значение: ')
     Y = input('Введите второе значение: ')
-    if X.isdigit() == True and Y.isdigit() == True:
+    if X.isdigit() and Y.isdigit():
         X = int(X)
         Y = int(Y)
     else:
