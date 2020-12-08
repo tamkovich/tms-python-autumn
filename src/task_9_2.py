@@ -3,5 +3,5 @@
 # длины. {‘abc’: 5} -> {‘abcabc’: 5}
 
 x = (lambda **kwargs: {key * 2: value for key, value in kwargs.items()})\
-    (abc=5, trd=7)
+     (abc=5, trd=7)
 print(x)
