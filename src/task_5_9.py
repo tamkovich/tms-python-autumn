@@ -3,7 +3,7 @@ n = input()
 if m.isdigit() and n.isdigit():
     m = int(m)
     n = int(n)
-    x = list(range(m, n+1))
+    x = list(range(m, n + 1))
     lx = len(x)
     matrix = []
     for number in range(0, lx):
