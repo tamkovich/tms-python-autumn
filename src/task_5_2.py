@@ -1,5 +1,5 @@
 number = input('Введите число: ')
-if number.isdigit() == True:
+if number.isdigit():
     number = int(number)
     result = []
     summa = 0
