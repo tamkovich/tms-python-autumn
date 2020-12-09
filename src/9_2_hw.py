@@ -2,5 +2,6 @@
 # количество именных аргументов и выводит словарь с ключами удвоенной
 # длины. {‘abc’: 5} -> {‘abcabc’: 5}
 
-function = lambda * args: [f"{i*2}:{5}" for i in args]
-print(function('uno', 'dos', 'tres'))
+func = lambda *args: [f"{i * 2}:{5}" for i in args]
+
+print(func('uno', 'dos', 'tres'))
