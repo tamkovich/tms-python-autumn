@@ -13,7 +13,8 @@ parser.add_argument("-nt", "--name-task", required=True)
 args = parser.parse_args()
 
 
-def create_generator_pomodoro():
+def create_generator_pomodoro() -> str:
+    """Записывает в файл время и данные пользователя"""
     for _ in range(0, args.count_cycle):
         with open("timer.txt", "a") as f:
             f.write(args.first_name + ", ")
