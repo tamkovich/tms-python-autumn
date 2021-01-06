@@ -1,11 +1,13 @@
 import time
 
 
-def focusing():
+def focusing() -> str:
+    """Выводит время работы и останавливает время"""
     print("Начало работы!(25 минут)")
     time.sleep(1500)
 
 
-def pause():
+def pause() -> str:
+    """Выводит время перерыва и останавливает время"""
     print("Перерыв. 5 минут")
     time.sleep(300)
