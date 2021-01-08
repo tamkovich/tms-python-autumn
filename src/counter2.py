@@ -1,7 +1,7 @@
-from classes.py import Circle
-from classes.py import Point
-from classes.py import Triangle
-from classes.py import Square
+from classes import Circle
+from classes import Point
+from classes import Square
+from classes import Triangle
 
 
 circle1 = Circle(Point(2, 3), 24)
