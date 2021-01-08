@@ -7,8 +7,8 @@
 
 import argparse
 from datetime import datetime
-import time
 import os
+import time
 
 
 now = datetime.now()
