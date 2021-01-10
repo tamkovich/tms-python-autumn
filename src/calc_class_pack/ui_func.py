@@ -1,13 +1,13 @@
 from classes import Math
-from exceptions import exc3ption
+from exceptions import get_valid_int_number
 
 
 def calculator():
     while True:
         print('Put integer here: ')
-        a = exc3ption()
+        a = get_valid_int_number()
         print('Put anither integer: ')
-        b = exc3ption()
+        b = get_valid_int_number()
         symbol = input('Put sign (+, -, *, /) or put 0 for exit: ')
         math = Math(a, b)
 
@@ -29,7 +29,6 @@ def calculator():
                 print(f"Div. of numbers is: {div1}")
             else:
                 print('Please enter second value other than zero')
-                continue
 
         elif symbol == "0":
             print('End.')
@@ -37,4 +36,3 @@ def calculator():
 
         else:
             print('Wrong input.')
-            continue

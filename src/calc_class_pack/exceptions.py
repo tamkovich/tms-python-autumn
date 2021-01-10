@@ -1,4 +1,5 @@
-def exc3ption():
+def get_valid_int_number():
+    """FUnction which checks is it integer digit on enter or not."""
     while True:
         x = input()
         if x.isdigit():
