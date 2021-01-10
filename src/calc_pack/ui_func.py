@@ -1,4 +1,4 @@
-from exceptions import exc3ption
+from exceptions import get_valid_int_number
 from func import total
 from func import subtraction
 from func import multiplication
@@ -8,9 +8,9 @@ from func import dvzn1312
 def calculator():
     while True:
         print('Put integer here: ')
-        a = exc3ption()
+        a = get_valid_int_number()
         print('Put other one here: ')
-        b = exc3ption()
+        b = get_valid_int_number()
         symbol = input('Put sign (+, -, *, /) or put 0 for exit: ')
 
         if symbol == "+":
@@ -31,7 +31,6 @@ def calculator():
                 print(f"Division of digits is: {div1}")
             else:
                 print('Please enter second value other than zero')
-                continue
 
         elif symbol == "0":
             print("End.")
@@ -39,4 +38,3 @@ def calculator():
 
         else:
             print("Wrong input.")
-            continue

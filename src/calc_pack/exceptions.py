@@ -1,4 +1,5 @@
-def exc3ption():
+def get_valid_int_number():
+    """Функция, что проверяет, было ли на входе принято число."""
     while True:
         x = input()
         if x.isdigit():
@@ -6,4 +7,3 @@ def exc3ption():
             return x
         else:
             print('It is not integer. Put another value:')
-            continue
