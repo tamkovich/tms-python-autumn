@@ -1,4 +1,4 @@
-def exception_():
+def get_valid_int_value():
     """Проверяем целое ли число введено, и меняем тип данных"""
     while True:
         x = input()
