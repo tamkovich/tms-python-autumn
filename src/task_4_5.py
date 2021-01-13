@@ -1,3 +1,6 @@
+"""Составить список чисел Фибоначчи содержащий 15 элементов."""
+
+
 kolvo = 15
 a = int(input("print first number of your fibonacci series"))
 b = a
