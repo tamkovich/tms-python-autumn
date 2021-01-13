@@ -34,11 +34,17 @@ for keys, value in poezda.items():
     y = value.get("Время прибытия").split()
 
     for i in x:
-        ho = int(i[0:2])
-        mo = int(i[3:5])
+        ho = i[0:2]
+        mo = i[3:5]
+        if ho.isdigit() and mo.isdigit():
+            ho = int(ho)
+            mo = int(mo)
         for m in y:
-            hp = int(m[0:2])
-            mp = int(m[3:5])
+            hp = m[0:2]
+            mp = m[3:5]
+            if hp.isdigit() and mp.isdigit():
+                hp = int(hp)
+                mp = int(mp)
             for values in poezda.items():
                 pribitie = datetime.timedelta(hours=hp, minutes=mp)
                 otpravlenie = datetime.timedelta(hours=ho, minutes=mo)
