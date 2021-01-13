@@ -11,7 +11,7 @@ umnozh = 1
 
 while n > 0:
     ostatok = n % 10
-    summ = summ + ostatok
+    summ += ostatok
     umnozh *= ostatok
     n //= 10
 
