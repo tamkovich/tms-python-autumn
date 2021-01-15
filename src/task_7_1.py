@@ -85,7 +85,20 @@ def liter_pint(liter):
 Использовать функции из первого
 задания.Код выхода из программы - “0”."""
 
-
+dict_functions = {
+    1: inch_centimeter,
+    2: centimeter_inch,
+    3: mile_kilometer,
+    4: kilometer_mile,
+    5: pound_kilogram,
+    6: kilogram_pound,
+    7: ounce_gram,
+    8: gram_ounce,
+    9: gallon_liter,
+    10: liter_gallon,
+    11: pint_liter,
+    12: liter_pint
+}
 while True:
     print('1.Дюймы в сантиметры\n'
           '2.Сантиметры в дюймы\n'
@@ -100,24 +113,18 @@ while True:
           '11.Пинты в литры\n'
           '12.Литры в пинты\n'
           'Введите число от 1 до 12:')
-    x = int(input())
+    x = input()
+    if x.isdigit():
+        x = int(x)
+    else:
+        print('Введено не число')
+
     if x == 0:
         break
     print('Введите величину:  ')
-    value = float(input())
-    dict_functions = {
-        1: inch_centimeter(value),
-        2: centimeter_inch(value),
-        3: mile_kilometer(value),
-        4: kilometer_mile(value),
-        5: pound_kilogram(value),
-        6: kilogram_pound(value),
-        7: ounce_gram(value),
-        8: gram_ounce(value),
-        9: gallon_liter(value),
-        10: liter_gallon(value),
-        11: pint_liter(value),
-        12: liter_pint(value)
-    }
-    if x in dict_functions.keys():
-        print(dict_functions[x])
+    value = input()
+    try:
+        float(value)
+    except ValueError:
+        print('Введите число')
+    dict_functions.get(x)(value)
