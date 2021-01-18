@@ -118,13 +118,16 @@ while True:
         x = int(x)
     else:
         print('Введено не число')
-
-    if x == 0:
+        continue
+    if 1 <= x <= 12:
+        print('Введите величину:  ')
+        value = input()
+        try:
+            y = float(value)
+        except ValueError:
+            print('Введите число')
+        print(dict_functions.get(x)(y))
+    elif x == 0:
         break
-    print('Введите величину:  ')
-    value = input()
-    try:
-        float(value)
-    except ValueError:
-        print('Введите число')
-    dict_functions.get(x)(value)
+    else:
+        print('Неверное число.')
