@@ -99,6 +99,19 @@ dict_functions = {
     11: pint_liter,
     12: liter_pint
 }
+
+
+def is_digit(string):
+    if string.isdigit():
+        return True
+    else:
+        try:
+            float(string)
+            return True
+        except ValueError:
+            return False
+
+
 while True:
     print('1.Дюймы в сантиметры\n'
           '2.Сантиметры в дюймы\n'
@@ -122,11 +135,11 @@ while True:
     if 1 <= x <= 12:
         print('Введите величину:  ')
         value = input()
-        try:
+        if is_digit(value):
             y = float(value)
-        except ValueError:
-            print('Введите число')
-        print(dict_functions.get(x)(y))
+            print(dict_functions.get(x)(y))
+        else:
+            print('Введено не число')
     elif x == 0:
         break
     else:
