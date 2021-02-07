@@ -1,0 +1,18 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="{% static 'main.css' %}">
+
+<body>
+    <div>
+        <a href="{{ obj.pk }}">Ссылка</a>
+        <b>{{ obj.title }}</b>
+        <p>{{ obj.content }}</p>
+    </div>
+    <hr>
+</body>
+</html>

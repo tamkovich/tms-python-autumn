@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User profile</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-top">
+          Bootstrap
+        </a>
+      </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <a href="{{ user.username }}">Ссылка</a>
+            <b>{{ user.username }}</b>
+            <p>{{ user.get_full_name }}</p>
+            <p>Телефон: {{ user.profile.phone }}</p>
+            <p>Страна: {{ user.profile.country }}</p>
+            <a class="btn btn-primary"
+               href="/{{ user.username }}/edit/"
+               role="button">Редактировать юзера</a>
+            <a role="button" class="btn btn-danger" href="/{{ user.username }}/delete/">
+                Удалить пользователя "{{ user.username }}"
+            </a>
+            <h3>User articles:</h3>
+            {% for article in articles %}
+                <div class="card" style="width: 18rem;">
+                  <img src="https://i.imgur.com/sTmQ0AM.jpg" class="card-img-top">
+                  <div class="card-body">
+                    <h5 class="card-title">{{ article.title}}</h5>
+                    <p class="card-text">{{ article.content }}</p>
+                    <a href="{% url 'get-articles' pk=article.pk %}" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</html>
