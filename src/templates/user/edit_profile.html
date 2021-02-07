@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User profile</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-top">
+          Bootstrap
+        </a>
+      </div>
+    </nav>
+
+    <h1>Форма для редактирования данных пользователя {{ user.get_full_name }}</h1>
+
+    <div class="container">
+        <div class="row">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input name="username" type="text" class="form-control" id="username" placeholder="enter username" value="{{ user.username }}">
+                </div>
+                <div class="mb-3">
+                  <label for="first_name" class="form-label">First name</label>
+                  <input name="first_name" type="text" class="form-control" id="first_name" placeholder="Enter first name" value="{{ user.first_name }}">
+                </div>
+                <div class="mb-3">
+                  <label for="last_name" class="form-label">Last name</label>
+                  <input name="last_name" type="text" class="form-control" id="last_name" placeholder="Enter last name" value="{{ user.last_name }}">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</html>
