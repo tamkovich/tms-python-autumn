@@ -1,2 +1,5 @@
 flake8
 pydocstyle
+flask
+flask-sqlalchemy
+flask-migrate

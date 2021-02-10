@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} INDEX {% endblock %}
+
+{% block content %}
+<div>
+    <h1>All users:</h1>
+    {% for user in users %}
+        <div>{{ user }}</div>
+    {% endfor %}
+
+</div>
+{% endblock %}
