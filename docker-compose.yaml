@@ -4,7 +4,7 @@ services:
     restart: always
     build: .
     command: >
-      bash -c "python3 run.py"
+      bash -c "python run.py"
     ports:
       - 5000:5000
     volumes:

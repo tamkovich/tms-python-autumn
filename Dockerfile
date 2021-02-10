@@ -1,11 +1,7 @@
-FROM python:3
-
+FROM python:alpine3.7
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
-
-ENV FLASK_APP run.py
-
 EXPOSE 5000
-#ENTRYPOINT ['python3']
-#CMD ['run.py']
+ENTRYPOINT [ "python" ]
+CMD ["run.py"]
