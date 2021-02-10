@@ -1,0 +1,11 @@
+version: '2.1'
+services:
+  app:
+    restart: always
+    build: .
+    entrypoint: >
+      bash -c "python3 run.py"
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/app

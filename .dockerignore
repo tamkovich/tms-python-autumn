@@ -1,0 +1,10 @@
+.git
+.dockerignore
+.gitignore
+LICENSE
+README.md
+Changelog.md
+src/
+.pytest_cache
+.circleci
+.tox.ini
