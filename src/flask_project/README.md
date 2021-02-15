@@ -8,7 +8,7 @@
 
 # docker
 
-cd src/flask_project/
+- cd src/flask_project/
 - sudo docker build -t flask_project:v0.1 .
 - sudo docker run -p 5000:5000 flask_project:v0.1
 
