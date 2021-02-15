@@ -9,8 +9,11 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import os
+import environ
 from pathlib import Path
+
+env = environ.Env()
+env.read_env(env.str('ENV_PATH', '.env'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '6j@eqjt)4f2xp$!e-67xqk_p^8)tv((pk^4m7hiswr6ii_$#c#'
+SECRET_KEY = env.str('SECRET_KEY', '1')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', False)
 
 ALLOWED_HOSTS = []
 
@@ -76,10 +79,10 @@ WSGI_APPLICATION = 'django_project.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        'PASSWORD': "password",
-        "HOST": "db",
+        "NAME": env.str('DATABASE_NAME'),
+        "USER": env.str('DATABASE_USER'),
+        'PASSWORD': env.str('DATABASE_PASSWORD'),
+        "HOST": env.str('DATABASE_HOST'),
         "PORT": "5432",
     },
     'sqlite': {
